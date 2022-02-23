@@ -4,7 +4,7 @@ Output:
 */
 
 export function greetUsers(customers) {
-  return customers.map(customer => `Hello ${customer.first_name} ${customer.last_name}!`)   
+  return customers.map(customer => `Hello ${customer.first_name} ${customer.last_name}!`)
 }
 
 /* 
@@ -13,11 +13,11 @@ Output:
 */
 
 export function greetUsersOverAge60(customers) {
-    return customers
-        // first, filter over the user to get the ones over 60
-        .filter(item => item.age > 60)
-        // then map over them to make a greeting
-        .map(item => `Hello ${item.first_name} ${item.last_name}!`);
+  return customers
+    // first, filter over the user to get the ones over 60
+    .filter(item => item.age > 60)
+    // then map over them to make a greeting
+    .map(item => `Hello ${item.first_name} ${item.last_name}!`);
 }
 
 
@@ -27,9 +27,9 @@ Output:
 */
 
 export function addAllAges(customers) {
-    return customers.reduce((sum, curr) => {
-      return sum + curr.age;
-    }, 0);
+  return customers.reduce((sum, curr) => {
+    return sum + curr.age;
+  }, 0);
 }
 
 /* 
@@ -38,10 +38,10 @@ Output:
 */
 
 export function getAverageCoolFactor(customers) {
-    const average = customers.reduce((sum, curr) => {
-      return sum + curr.cool_factor
-    }, 0) / customers.length;
-    return average;
+  const average = customers.reduce((sum, curr) => {
+    return sum + curr.cool_factor
+  }, 0) / customers.length;
+  return average;
 }
 
 /* 
@@ -55,7 +55,14 @@ Output:
 */
 
 export function getTotalOfEachGender(customers) {
-    return true;
+  return customers.reduce((genderObj, curr) => {
+    if (genderObj[curr.gender]) {
+      genderObj[curr.gender]++;
+    } else {
+      genderObj[curr.gender] = 1;
+    }
+    return genderObj;
+  }, {});
 }
 
 /* 
@@ -69,7 +76,7 @@ Output:
 */
 
 export function getGenderBreakdownOfFordOwners(customers) {
-    return true;
+  return true;
 }
 
 //////////////////////////////////////////////////////////
@@ -94,7 +101,7 @@ Output:
 */
 
 export function getGenderBreakdownOfEachCar(customers) {
-    return true;
+  return true;
 }
 
 /* 
@@ -109,7 +116,7 @@ Output:
 
 
 export function getAllCoolFactorsOfEachCar(customers) {
-    return true;
+  return true;
 }
 
 /* 
@@ -122,7 +129,7 @@ Output:
 */
 
 export function getAverageCoolFactorOfEachCar(customers) {
-    return true;
+  return true;
 }
 
 
@@ -143,7 +150,7 @@ Output:
 */
 
 export function makeAgeBrackets(customers) {
-    return true;
+  return true;
 }
 
 /* 
@@ -159,7 +166,7 @@ Output:
 */
 
 export function getCoolFactorsByAgeBracket(customers) {
-    return true;
+  return true;
 }
 
 
@@ -176,6 +183,6 @@ Output:
 */
 
 export function getAverageCoolFactorByAgeBracket(customers) {
-    return true;
+  return true;
 }
 
