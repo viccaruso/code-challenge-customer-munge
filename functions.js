@@ -55,7 +55,7 @@ Output:
 */
 
 export function getTotalOfEachGender(customers) {
-  return customers.reduce((genderObj, curr) => {
+  const genderCount = customers.reduce((genderObj, curr) => {
     if (genderObj[curr.gender]) {
       genderObj[curr.gender]++;
     } else {
@@ -63,6 +63,8 @@ export function getTotalOfEachGender(customers) {
     }
     return genderObj;
   }, {});
+
+  return genderCount;
 }
 
 /* 
@@ -76,7 +78,18 @@ Output:
 */
 
 export function getGenderBreakdownOfFordOwners(customers) {
-  return true;
+  const genderCount = customers.reduce((genderObj, curr) => {
+    if (curr.car_make === 'Ford') {
+    if (genderObj[curr.gender]) {
+      genderObj[curr.gender]++;
+    } else {
+      genderObj[curr.gender] = 1;
+    }
+  }
+    return genderObj;
+  }, {});
+
+  return genderCount;
 }
 
 //////////////////////////////////////////////////////////
