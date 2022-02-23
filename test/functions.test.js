@@ -91,19 +91,19 @@ test('addAllAges', (expect) => {
   const expected = 500;
   const sampleData = [
     {
-      age: 100
+      age: 99
     },
     {
       age: 100
     },
     {
-      age: 100
+      age: 101
     },
     {
-      age: 100
+      age: 98
     },
     {
-      age: 100
+      age: 102
     }
   ]
   const actual = addAllAges(sampleData);
