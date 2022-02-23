@@ -38,7 +38,10 @@ Output:
 */
 
 export function getAverageCoolFactor(customers) {
-    return true;
+    const average = customers.reduce((sum, curr) => {
+      return sum + curr.cool_factor
+    }, 0) / customers.length;
+    return average;
 }
 
 /* 
